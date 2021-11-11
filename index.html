@@ -15,12 +15,18 @@
   <link rel="stylesheet" href="index.css" />
   <body>
     <nav class="navbar">
-      <span class="navbar__logo"> <strong> XYZ LOGO </strong></span>
-      <div class="navbar__right">
-        <span class="navbar__home">Home</span>
-        <span class="navbar__icon">
-          <i class="fas fa-shopping-cart fa-3x" aria-hidden="true"></i>
-        </span>
+      <div class="navbar-content container">
+        <span class="navbar__logo"> <strong> XYZ LOGO </strong></span>
+        <div class="navbar__right">
+          <span class="navbar__home">Home</span>
+          <span class="navbar__icon">
+            <span class="total_cart">0</span>
+            <i
+              class="fas fa-shopping-cart fa-2x cart-btn"
+              aria-hidden="true"
+            ></i>
+          </span>
+        </div>
       </div>
     </nav>
     <section class="hero__section container">
@@ -90,59 +96,38 @@
 
     <section class="products__section container">
       <h2>Our Products</h2>
-      <div class="product__list">
-        <div class="product__item">
-          <img src="/img/mattress1.jpg" alt="" />
-          <div class="product__details">
-            <h3>Product Name AYZ ITEM</h3>
-            <h4>124445625 Ksh</h4>
-            <p>Lorem ipsum dolor sit amet consectetur...</p>
-          </div>
-          <button class="btn__addtocart">Add To Cart</button>
-        </div>
-
-        <div class="product__item">
-          <img src="/img/mattress1.jpg" alt="" />
-          <div class="product__details">
-            <h3>Product Name AYZ ITEM</h3>
-            <h4>124445625 Ksh</h4>
-            <p>Lorem ipsum dolor sit amet consectetur...</p>
-          </div>
-          <button class="btn__addtocart">Add To Cart</button>
-        </div>
-
-        <div class="product__item">
-          <img src="/img/mattress1.jpg" alt="" />
-          <div class="product__details">
-            <h3>Product Name AYZ ITEM</h3>
-            <h4>124445625 Ksh</h4>
-            <p>Lorem ipsum dolor sit amet consectetur...</p>
-          </div>
-          <button class="btn__addtocart">Add To Cart</button>
-        </div>
-
-        <div class="product__item">
-          <img src="/img/mattress1.jpg" alt="" />
-          <div class="product__details">
-            <h3>Product Name AYZ ITEM</h3>
-            <h4>124445625 Ksh</h4>
-            <p>Lorem ipsum dolor sit amet consectetur...</p>
-          </div>
-          <button class="btn__addtocart">Add To Cart</button>
-        </div>
-
-        <div class="product__item">
-          <img src="/img/mattress1.jpg" alt="" />
-          <div class="product__details">
-            <h3>Product Name AYZ ITEM</h3>
-            <h4>124445625 Ksh</h4>
-            <p>Lorem ipsum dolor sit amet consectetur...</p>
-          </div>
-          <button class="btn__addtocart">Add To Cart</button>
-        </div>
-      </div>
+      <div class="product__list"></div>
     </section>
 
+    <div class="cart-modal">
+      <div class="cart-modal-content">
+        <h4 class="cart-title">Cart</h4>
+        <hr />
+        <div class="cart-items"></div>
+        <hr />
+        <div class="cart-summary">
+          <div class="summary-item">
+            <h4>Sub Total</h4>
+            <h4 class="cart-subtotal">34576672 Ksh</h4>
+          </div>
+          <div class="summary-item">
+            <h4>Discount</h4>
+            <h4 class="cart-discount">6672 Ksh</h4>
+          </div>
+          <div class="summary-item">
+            <h4>Grand Total</h4>
+            <h4 class="cart-total">34556672 Ksh</h4>
+          </div>
+        </div>
+        <hr />
+        <div class="cart-btns">
+          <button class="continue-btn">Continue Shopping</button>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/displayProducts.js"></script>
     <script src="/js/index.js"></script>
   </body>
 </html>
